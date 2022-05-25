@@ -1,5 +1,11 @@
 import React from 'react';
 import { hydrate } from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 import Router from './Router';
 
-hydrate(<Router />, document.getElementById('root'));
+hydrate(
+  <BrowserRouter>
+    <Router />
+  </BrowserRouter>,
+  document.getElementById('root') as HTMLDivElement,
+) 

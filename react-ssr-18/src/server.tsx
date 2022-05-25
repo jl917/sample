@@ -8,8 +8,10 @@ import path from 'path';
 
 let app = express();
 
+
+app.use('/', express.static('dist'));
 app.get("*", (req, res) => {
-  fs.readFile(path.resolve("./src/index.html"), "utf-8", (err, data) => {
+  fs.readFile(path.resolve("./dist/index.html"), "utf-8", (err, data) => {
     if (err) {
       console.log(err);
       return res.status(500).send("Some error happened");
@@ -19,7 +21,11 @@ app.get("*", (req, res) => {
         <Router />
       </StaticRouter>
     );
-    return res.send(data.replace('<div id="root"></div>', `<div id="root">${html}</div>`));
+
+    return res.send(
+      data
+        .replace('<div id="root"></div>', `<div id="root">${html}</div>`)
+    );
   });
 });
 
