@@ -7,7 +7,7 @@ const Main = () => {
   return (
     <div>
       <h1>{count}</h1>
-      <div>Main</div>
+      <div>Main5</div>
     </div>
   )
 }

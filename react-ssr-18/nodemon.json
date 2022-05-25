@@ -1,0 +1,10 @@
+{
+  "restartable": "rs",
+  "ext": "js,json,jsx, ts, tsx, html",
+  "watch": [
+    "./src/"
+  ],
+  "execMap": {
+    "js": "vite build --mode production && ts-node"
+  }
+}

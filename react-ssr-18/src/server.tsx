@@ -5,11 +5,13 @@ import { StaticRouter } from "react-router-dom/server";
 import Router from "./Router";
 import fs from 'fs';
 import path from 'path';
+import compression from 'compression';
 
 let app = express();
 
+app.use(compression());
+app.use('/', express.static('dist', {index: ['default.html']}));
 
-app.use('/', express.static('dist'));
 app.get("*", (req, res) => {
   fs.readFile(path.resolve("./dist/index.html"), "utf-8", (err, data) => {
     if (err) {
