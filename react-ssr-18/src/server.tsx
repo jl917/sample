@@ -6,13 +6,19 @@ import Router from "./Router";
 import fs from 'fs';
 import path from 'path';
 import compression from 'compression';
+import { RecoilRoot } from 'recoil';
+import { atomCount } from './store';
 
 let app = express();
 
 app.use(compression());
-app.use('/', express.static('dist', {index: ['default.html']}));
+app.use('/', express.static('dist', { index: ['default.html'] }));
 
 app.get("*", (req, res) => {
+
+  const initializeState = ({ set }: any) => {
+    set(atomCount, 5);
+  };
   fs.readFile(path.resolve("./dist/index.html"), "utf-8", (err, data) => {
     if (err) {
       console.log(err);
@@ -20,7 +26,9 @@ app.get("*", (req, res) => {
     }
     let html = ReactDOMServer.renderToString(
       <StaticRouter location={req.url}>
-        <Router />
+        <RecoilRoot initializeState={initializeState}>
+          <Router />
+        </RecoilRoot>
       </StaticRouter>
     );
 
@@ -31,4 +39,6 @@ app.get("*", (req, res) => {
   });
 });
 
-app.listen(3004);
+app.listen(3004, () => {
+  console.log('server start 3004')
+});
