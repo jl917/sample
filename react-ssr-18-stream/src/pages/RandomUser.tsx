@@ -2,15 +2,15 @@ import React, { Suspense } from 'react';
 import axios from 'axios';
 
 const fetcher = async () => {
+  console.log('fetcher')
   return new Promise((resolve) => {
     setTimeout(async () => {
-      resolve(await axios({ url: 'https://randomuser.me/api/', headers: {'Cache-Control': 'no-cache'} }))
+      resolve(await axios({ url: 'https://randomuser.me/api/', headers: { 'Cache-Control': 'no-cache' } }))
     }, 3000)
   })
 }
 
 function wrapPromise (promise: any) {
-  console.log(promise);
   let status = "pending";
   let result: any;
   let suspender = promise.then(
@@ -35,14 +35,14 @@ function wrapPromise (promise: any) {
     }
   };
 }
-
 const resource = wrapPromise(fetcher())
 
+
 const Contents = () => {
+
   // const { data, error } = useSWR('aaa', wrapPromise(fetcher()).read(), { suspense: true });
   const aaa = resource.read();
-  console.log('aaa');
-  console.log(aaa)
+
   return <>{JSON.stringify(aaa.data.results)}</>
 }
 
