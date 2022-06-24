@@ -1,64 +1,35 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, useEffect, useId, useState } from 'react';
 import axios from 'axios';
+import { useQuery } from 'react-query'
 
 const fetcher = async () => {
-  console.log('fetcher')
   return new Promise((resolve) => {
     setTimeout(async () => {
-      resolve(await axios({ url: 'https://randomuser.me/api/', headers: { 'Cache-Control': 'no-cache' } }))
+      resolve(await axios({ url: 'https://randomuser.me/api/' }))
     }, 3000)
   })
 }
 
-function wrapPromise (promise: any) {
-  let status = "pending";
-  let result: any;
-  let suspender = promise.then(
-    (r: any) => {
-      status = "success";
-      result = r;
-    },
-    (e: any) => {
-      status = "error";
-      result = e;
-    }
-  );
-  return {
-    read () {
-      if (status === "pending") {
-        throw suspender;
-      } else if (status === "error") {
-        throw result;
-      } else if (status === "success") {
-        return result;
-      }
-    }
-  };
-}
-const resource = wrapPromise(fetcher())
 
 
-const Contents = () => {
-
-  // const { data, error } = useSWR('aaa', wrapPromise(fetcher()).read(), { suspense: true });
-  const aaa = resource.read();
-
-  return <>{JSON.stringify(aaa.data.results)}</>
+const Contents: React.FC<any> = ({ date }) => {
+  const result = useQuery<any>(date, fetcher, {
+    staleTime: Infinity, // default 0
+    cacheTime: 0, // default 5 minitue 1000 * 60 * 5
+    retry: 1, // default 6
+    retryDelay: 1000, // default 1000
+    suspense: true
+  })
+  const { data } = result
+  return <>{JSON.stringify(data.data)}</>
 }
 
 const RandomUser = () => {
   return (
     <Suspense fallback={<div>loading...</div>} >
-      <Contents />
+      <Contents date={`${new Date().getTime()}`} />
     </Suspense>
   )
 }
-
-// async function getStaticProps (this: any) {
-//   const { data } = await axios.get('https://randomuser.me/api/');
-//   return data.result;
-// }
-
-// RandomUser.getStaticProps = getStaticProps
 
 export default RandomUser;

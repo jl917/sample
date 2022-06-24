@@ -1,14 +1,12 @@
 import React from 'react';
-import { hydrate } from 'react-dom';
+import { hydrateRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
-import { RecoilRoot } from 'recoil';
-import Router from './Router';
+import Provider from './Provider';
 
-hydrate(
-  <BrowserRouter>
-    <RecoilRoot>
-      <Router />
-    </RecoilRoot>
-  </BrowserRouter>,
+hydrateRoot(
   document.getElementById('root') as HTMLDivElement,
-) 
+  <BrowserRouter>
+    <Provider />
+  </BrowserRouter>
+)
+
