@@ -1,0 +1,22 @@
+<h1></h1>
+
+<script type="importmap">
+{
+  "imports": {
+    "lodash": "https://cdn.jsdelivr.net/npm/lodash-es@4.17.21/lodash.js"
+  }
+}
+</script>
+<!-- <script type="importmap">
+{
+  "imports": {
+    "lodash": "https://unpkg.com/lodash-es@4.17.21/lodash.js"
+  }
+}
+</script> -->
+<script type="module">
+  import { defaults } from 'lodash';
+
+  console.log(defaults({ 'a': 1 }, { 'a': 3, 'b': 2 }));
+
+</script>
