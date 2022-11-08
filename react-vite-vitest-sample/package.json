@@ -1,0 +1,34 @@
+{
+  "name": "react-training",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "6.2.1",
+    "recoil": "0.5.2"
+  },
+  "scripts": {
+    "start": "vite --mode dev",
+    "dev": "vite --mode dev",
+    "build": "vite build --mode production",
+    "test": "vitest",
+    "coverage": "vitest run --coverage",
+    "lint": "jlint -t react -m default",
+    "fix": "jlint -t react -m fix"
+
+  },
+  "devDependencies": {
+    "@julong/eslint-watch": "^1.0.0",
+    "@testing-library/react": "^13.4.0",
+    "@vitejs/plugin-react": "^1.1.4",
+    "@vitest/coverage-c8": "^0.24.5",
+    "happy-dom": "^7.6.6",
+    "vite": "^2.7.13",
+    "vitest": "^0.24.5"
+  }
+}
