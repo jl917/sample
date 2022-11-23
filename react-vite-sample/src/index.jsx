@@ -1,7 +1,8 @@
-import ReactDOM from "react-dom";
+import { startTransition } from 'react';
+import { createRoot } from "react-dom/client";
 
-const rootElement = document.getElementById("root");
-ReactDOM.render(
-  <div>123</div>,
-  rootElement
-);
+const root = createRoot(document.getElementById("root"));
+
+startTransition(() => {
+  root.render(<div>123</div>)
+})
