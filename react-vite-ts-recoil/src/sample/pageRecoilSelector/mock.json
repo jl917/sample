@@ -1,0 +1,570 @@
+{
+  "results": [
+    {
+      "gender": "male",
+      "name": {
+        "title": "Mr",
+        "first": "Vladan",
+        "last": "Simić"
+      },
+      "location": {
+        "street": {
+          "number": 8747,
+          "name": "Brainska"
+        },
+        "city": "Bačka Palanka",
+        "state": "Raška",
+        "country": "Serbia",
+        "postcode": 49511,
+        "coordinates": {
+          "latitude": "60.8689",
+          "longitude": "-71.4896"
+        },
+        "timezone": {
+          "offset": "+3:00",
+          "description": "Baghdad, Riyadh, Moscow, St. Petersburg"
+        }
+      },
+      "email": "vladan.simic@example.com",
+      "login": {
+        "uuid": "db8d11b7-59a6-47bc-a739-2b62c0a027f3",
+        "username": "brownlion259",
+        "password": "hungry",
+        "salt": "xLOAEQYO",
+        "md5": "77dd281ad0f37b43e9efc25a0762c282",
+        "sha1": "3c9dfbe268ed0cd768fc930b0ea93a3e7a19456c",
+        "sha256": "cc6202541c1be13f21bdf83da4e2ad32a6a8d9508758842612ec30b6d73237c0"
+      },
+      "dob": {
+        "date": "1987-02-01T12:43:52.104Z",
+        "age": 35
+      },
+      "registered": {
+        "date": "2010-01-18T02:54:57.068Z",
+        "age": 12
+      },
+      "phone": "030-6014-925",
+      "cell": "068-1309-203",
+      "id": {
+        "name": "SID",
+        "value": "337019681"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/15.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/15.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/15.jpg"
+      },
+      "nat": "RS"
+    },
+    {
+      "gender": "female",
+      "name": {
+        "title": "Mrs",
+        "first": "Laura",
+        "last": "Williamson"
+      },
+      "location": {
+        "street": {
+          "number": 3117,
+          "name": "New Road"
+        },
+        "city": "Newcastle West",
+        "state": "Galway",
+        "country": "Ireland",
+        "postcode": 82994,
+        "coordinates": {
+          "latitude": "1.2378",
+          "longitude": "138.2532"
+        },
+        "timezone": {
+          "offset": "+5:30",
+          "description": "Bombay, Calcutta, Madras, New Delhi"
+        }
+      },
+      "email": "laura.williamson@example.com",
+      "login": {
+        "uuid": "240f3155-6b01-4fae-9889-f9b47b4c469d",
+        "username": "tinytiger313",
+        "password": "babylon",
+        "salt": "txL3QWK8",
+        "md5": "ad13b8d6cfadac07d1181f47f3e1bebd",
+        "sha1": "5b737763c622b2008bb2e3b8d6e62825b43e327e",
+        "sha256": "a903778169b419dda74261158e3b05ba85366a57aa0e1d35f12f382b567a8cfc"
+      },
+      "dob": {
+        "date": "1961-03-29T00:59:08.445Z",
+        "age": 61
+      },
+      "registered": {
+        "date": "2007-08-10T03:41:11.063Z",
+        "age": 15
+      },
+      "phone": "061-774-6860",
+      "cell": "081-484-8432",
+      "id": {
+        "name": "PPS",
+        "value": "4304111T"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/51.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/51.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/51.jpg"
+      },
+      "nat": "IE"
+    },
+    {
+      "gender": "male",
+      "name": {
+        "title": "Mr",
+        "first": "Branislav",
+        "last": "Mitrović"
+      },
+      "location": {
+        "street": {
+          "number": 2080,
+          "name": "Vranovačka"
+        },
+        "city": "Veliko Gradište",
+        "state": "Šumadija",
+        "country": "Serbia",
+        "postcode": 44026,
+        "coordinates": {
+          "latitude": "32.9930",
+          "longitude": "98.8784"
+        },
+        "timezone": {
+          "offset": "-5:00",
+          "description": "Eastern Time (US & Canada), Bogota, Lima"
+        }
+      },
+      "email": "branislav.mitrovic@example.com",
+      "login": {
+        "uuid": "9f1ee344-8cbc-479d-a07d-6d7537506112",
+        "username": "bluemouse352",
+        "password": "sanity72",
+        "salt": "j0rnTfL7",
+        "md5": "0e00ce8ce91ab296f3c54026e054c6bd",
+        "sha1": "4e4bf08134b0cd53520a7afa02aab39151ba5412",
+        "sha256": "6cf19df70f1dbc25ceb4f77ae605f46ec715f4eb07f6aaecf4acc4ef96d6c603"
+      },
+      "dob": {
+        "date": "1947-09-18T20:47:54.926Z",
+        "age": 75
+      },
+      "registered": {
+        "date": "2020-02-10T02:45:00.564Z",
+        "age": 2
+      },
+      "phone": "017-0790-555",
+      "cell": "064-2844-092",
+      "id": {
+        "name": "SID",
+        "value": "008514006"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/28.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/28.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/28.jpg"
+      },
+      "nat": "RS"
+    },
+    {
+      "gender": "male",
+      "name": {
+        "title": "Mr",
+        "first": "Arnas",
+        "last": "Vie"
+      },
+      "location": {
+        "street": {
+          "number": 9299,
+          "name": "Strandpromenaden"
+        },
+        "city": "Tjørvåg",
+        "state": "Sør-Trøndelag",
+        "country": "Norway",
+        "postcode": "2664",
+        "coordinates": {
+          "latitude": "56.4792",
+          "longitude": "-155.6419"
+        },
+        "timezone": {
+          "offset": "+5:00",
+          "description": "Ekaterinburg, Islamabad, Karachi, Tashkent"
+        }
+      },
+      "email": "arnas.vie@example.com",
+      "login": {
+        "uuid": "1643fed6-2f43-4b19-bc29-40e41b0bf188",
+        "username": "bluekoala372",
+        "password": "tribble",
+        "salt": "1XQv0MW9",
+        "md5": "65ea3f96a68050ebbae23c61e830f598",
+        "sha1": "1935b53098dd87424c6417b707bf4f632a63436e",
+        "sha256": "dced18685bfe1ec7e4441019e228b9ed38917f9edc4e8e47c104cc8942aba202"
+      },
+      "dob": {
+        "date": "1947-01-17T14:39:01.540Z",
+        "age": 75
+      },
+      "registered": {
+        "date": "2002-03-29T14:19:56.239Z",
+        "age": 20
+      },
+      "phone": "24760085",
+      "cell": "48047611",
+      "id": {
+        "name": "FN",
+        "value": "17014723722"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/79.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/79.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/79.jpg"
+      },
+      "nat": "NO"
+    },
+    {
+      "gender": "male",
+      "name": {
+        "title": "Mr",
+        "first": "Jaime",
+        "last": "Santiago"
+      },
+      "location": {
+        "street": {
+          "number": 3897,
+          "name": "Calle de Alberto Aguilera"
+        },
+        "city": "Vitoria",
+        "state": "Comunidad Valenciana",
+        "country": "Spain",
+        "postcode": 17637,
+        "coordinates": {
+          "latitude": "13.6755",
+          "longitude": "-26.9825"
+        },
+        "timezone": {
+          "offset": "+7:00",
+          "description": "Bangkok, Hanoi, Jakarta"
+        }
+      },
+      "email": "jaime.santiago@example.com",
+      "login": {
+        "uuid": "4d670e40-0d92-4701-ac51-ebeddbcdcb5f",
+        "username": "bigbear514",
+        "password": "flip",
+        "salt": "hgg3ezcj",
+        "md5": "db4dbd495919b2e38937db239525505a",
+        "sha1": "a646e2f97f40d2d55f231b320e898786d2dd1f97",
+        "sha256": "3ff10e4265b5ccf76bc253968dfeb878a03a39ceeaebaa8806b56593e3afa06a"
+      },
+      "dob": {
+        "date": "1994-04-02T07:01:45.294Z",
+        "age": 28
+      },
+      "registered": {
+        "date": "2013-11-28T14:31:55.085Z",
+        "age": 8
+      },
+      "phone": "964-547-246",
+      "cell": "630-648-444",
+      "id": {
+        "name": "DNI",
+        "value": "44132536-R"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/3.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/3.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/3.jpg"
+      },
+      "nat": "ES"
+    },
+    {
+      "gender": "male",
+      "name": {
+        "title": "Mr",
+        "first": "Saša",
+        "last": "Blagojević"
+      },
+      "location": {
+        "street": {
+          "number": 188,
+          "name": "Partizanski Sastanak"
+        },
+        "city": "Vrbas",
+        "state": "South Banat",
+        "country": "Serbia",
+        "postcode": 48716,
+        "coordinates": {
+          "latitude": "21.6983",
+          "longitude": "104.0320"
+        },
+        "timezone": {
+          "offset": "+11:00",
+          "description": "Magadan, Solomon Islands, New Caledonia"
+        }
+      },
+      "email": "sasa.blagojevic@example.com",
+      "login": {
+        "uuid": "fe37400c-16ba-401e-84d0-7ba1284478dc",
+        "username": "brownbear745",
+        "password": "legacy",
+        "salt": "nRS8Dvmx",
+        "md5": "ca0ccf93edcc17f6ca8dac36df21f03a",
+        "sha1": "713bdfbf75efa83c1036d7d0eead33dec99341f7",
+        "sha256": "b8667053b16b1783cc5358ff34781d60e82294db960fea7286f1ed62fef0d6c0"
+      },
+      "dob": {
+        "date": "1960-07-25T15:51:15.705Z",
+        "age": 62
+      },
+      "registered": {
+        "date": "2022-02-25T23:34:15.655Z",
+        "age": 0
+      },
+      "phone": "039-9220-184",
+      "cell": "069-1490-760",
+      "id": {
+        "name": "SID",
+        "value": "770280552"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/73.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/73.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/73.jpg"
+      },
+      "nat": "RS"
+    },
+    {
+      "gender": "female",
+      "name": {
+        "title": "Ms",
+        "first": "Trinidad",
+        "last": "Esteban"
+      },
+      "location": {
+        "street": {
+          "number": 4897,
+          "name": "Calle Nebrija"
+        },
+        "city": "Ciudad Real",
+        "state": "País Vasco",
+        "country": "Spain",
+        "postcode": 72204,
+        "coordinates": {
+          "latitude": "-19.8479",
+          "longitude": "-86.9265"
+        },
+        "timezone": {
+          "offset": "-3:30",
+          "description": "Newfoundland"
+        }
+      },
+      "email": "trinidad.esteban@example.com",
+      "login": {
+        "uuid": "f91111d1-6025-4107-9909-796b37a60b6d",
+        "username": "whitebear546",
+        "password": "ametuer",
+        "salt": "ilZRHNBx",
+        "md5": "78edf526cda726dce441da5adc1bc1e0",
+        "sha1": "2ebdfa9d7085180031e3136983da1b8103d760b8",
+        "sha256": "fb66e0c7a7a3c982879cb1c8be8097ddeea775b115dbedb6f0885ec70bb937f8"
+      },
+      "dob": {
+        "date": "1985-04-26T01:19:38.754Z",
+        "age": 37
+      },
+      "registered": {
+        "date": "2015-05-18T03:46:36.235Z",
+        "age": 7
+      },
+      "phone": "906-154-848",
+      "cell": "637-517-857",
+      "id": {
+        "name": "DNI",
+        "value": "54924825-S"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/91.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/91.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/91.jpg"
+      },
+      "nat": "ES"
+    },
+    {
+      "gender": "male",
+      "name": {
+        "title": "Mr",
+        "first": "Jacob",
+        "last": "Margaret"
+      },
+      "location": {
+        "street": {
+          "number": 488,
+          "name": "Arctic Way"
+        },
+        "city": "Chatham",
+        "state": "Ontario",
+        "country": "Canada",
+        "postcode": "T2T 0Q5",
+        "coordinates": {
+          "latitude": "-10.1274",
+          "longitude": "-26.2612"
+        },
+        "timezone": {
+          "offset": "-2:00",
+          "description": "Mid-Atlantic"
+        }
+      },
+      "email": "jacob.margaret@example.com",
+      "login": {
+        "uuid": "77725385-aad7-4b0f-8afc-63bbf7536830",
+        "username": "tinypanda340",
+        "password": "starter",
+        "salt": "tDa8UYX5",
+        "md5": "b788cea64af2f73a9db95b951d69514a",
+        "sha1": "d2e6488aa1d0261ce6b7cf6e2cd3f9325be9d8b6",
+        "sha256": "27b35c2594ab5ef6f2ae7f76e0987a35f3f1b9191c0834b3b056f8a329b52dd7"
+      },
+      "dob": {
+        "date": "1964-02-29T06:34:36.809Z",
+        "age": 58
+      },
+      "registered": {
+        "date": "2017-08-18T06:12:42.076Z",
+        "age": 5
+      },
+      "phone": "L90 I87-3564",
+      "cell": "T93 A35-1951",
+      "id": {
+        "name": "SIN",
+        "value": "661832634"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/41.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/41.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/41.jpg"
+      },
+      "nat": "CA"
+    },
+    {
+      "gender": "male",
+      "name": {
+        "title": "Mr",
+        "first": "Aleksi",
+        "last": "Korpela"
+      },
+      "location": {
+        "street": {
+          "number": 6250,
+          "name": "Aleksanterinkatu"
+        },
+        "city": "Vårdö",
+        "state": "North Karelia",
+        "country": "Finland",
+        "postcode": 16149,
+        "coordinates": {
+          "latitude": "39.0709",
+          "longitude": "-79.0530"
+        },
+        "timezone": {
+          "offset": "-4:00",
+          "description": "Atlantic Time (Canada), Caracas, La Paz"
+        }
+      },
+      "email": "aleksi.korpela@example.com",
+      "login": {
+        "uuid": "fbdfe340-3e7e-426f-8bb0-cc04d18935de",
+        "username": "tinykoala907",
+        "password": "basketball",
+        "salt": "jTvKgVyJ",
+        "md5": "799a5e7b4157e4f26c534c9924111cd4",
+        "sha1": "05c041537e7dd125a8cd653507025c3508e08ba8",
+        "sha256": "e0f4cd14c9cea60cb6861b53e8be7671e252eea821f858e0af7060ef0f8f129d"
+      },
+      "dob": {
+        "date": "1991-05-23T10:42:41.729Z",
+        "age": 31
+      },
+      "registered": {
+        "date": "2008-03-14T16:11:48.079Z",
+        "age": 14
+      },
+      "phone": "07-072-271",
+      "cell": "044-222-75-36",
+      "id": {
+        "name": "HETU",
+        "value": "NaNNA143undefined"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/44.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/44.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/44.jpg"
+      },
+      "nat": "FI"
+    },
+    {
+      "gender": "male",
+      "name": {
+        "title": "Mr",
+        "first": "Djay",
+        "last": "Logtenberg"
+      },
+      "location": {
+        "street": {
+          "number": 3642,
+          "name": "Boezem"
+        },
+        "city": "Oudeschoot",
+        "state": "Zuid-Holland",
+        "country": "Netherlands",
+        "postcode": "9704 LQ",
+        "coordinates": {
+          "latitude": "-46.1033",
+          "longitude": "111.2252"
+        },
+        "timezone": {
+          "offset": "0:00",
+          "description": "Western Europe Time, London, Lisbon, Casablanca"
+        }
+      },
+      "email": "djay.logtenberg@example.com",
+      "login": {
+        "uuid": "47e3eb22-db8a-4761-a07b-af09297d7c5b",
+        "username": "tinydog674",
+        "password": "joker1",
+        "salt": "epbOvCne",
+        "md5": "5b5a32335475830c261471911abcb311",
+        "sha1": "008aa2772e61c4801da493ed9e21c97290348539",
+        "sha256": "9e6ef8220e9d1958fa113f4827a7268f3e543bc3e244ae5945b50fcfff731354"
+      },
+      "dob": {
+        "date": "1994-07-06T20:50:55.371Z",
+        "age": 28
+      },
+      "registered": {
+        "date": "2019-04-21T11:44:10.658Z",
+        "age": 3
+      },
+      "phone": "(067) 5966898",
+      "cell": "(06) 61863334",
+      "id": {
+        "name": "BSN",
+        "value": "47236993"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/84.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/84.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/84.jpg"
+      },
+      "nat": "NL"
+    }
+  ],
+  "info": {
+    "seed": "53f80f991aeb7246",
+    "results": 10,
+    "page": 1,
+    "version": "1.4"
+  }
+}
