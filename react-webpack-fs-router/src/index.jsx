@@ -1,4 +1,4 @@
-import { startTransition } from 'react';
+import React, { startTransition } from 'react';
 import { createRoot } from "react-dom/client";
 import App from './router';
 

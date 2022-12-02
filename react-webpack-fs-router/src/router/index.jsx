@@ -6,11 +6,13 @@ const routes = __ROUTES__;
 
 console.log(routes);
 
+routes.map(({ path, elementPath }) => console.log(path, elementPath));
+
 const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
-        {routes.map(({path, elementPath}) => <Route path={path} key={path} element={Loader(elementPath)} />)}
+        {routes.map(({ path, elementPath }) => <Route path={path} key={path} element={Loader(elementPath)} />)}
       </Routes>
     </BrowserRouter>
   )

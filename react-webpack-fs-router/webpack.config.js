@@ -42,13 +42,28 @@ let config = {
   ],
 };
 
+if (process.env.NODE_ENV === 'local') {
+  config = Object.assign(config, {
+    devtool: 'source-map',
+    mode: 'development',
+    devServer: {
+      static: './dist',
+      host: 'localhost', // 'localhost',//host: '192.168.0.57',
+      hot: true,
+      historyApiFallback: true,
+      compress: true,
+    },
+  });
+}
+
+
 function getRoutes () {
   const modules = glob.sync('./src/pages/**/*.page.jsx');
   const routes = [];
 
   for (const item of modules) {
     let newPath = item.replace('./src/pages', '').replace('.page.jsx', '');
-    let elementPath = item.replace('./src/pages', '').slice(0, -4);
+    let elementPath = item.replace('./src/pages/', '');
     routes.push({ path: newPath, elementPath, });
 
     if (newPath.endsWith('index')) {
