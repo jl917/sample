@@ -1,12 +1,7 @@
-import React from 'react';
 import { Routes, BrowserRouter, Route } from 'react-router-dom';
 import Loader from './Loader';
 
 const routes = __ROUTES__;
-
-console.log(routes);
-
-routes.map(({ path, elementPath }) => console.log(path, elementPath));
 
 const Router = () => {
   return (

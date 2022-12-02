@@ -7,6 +7,7 @@ var glob = require("glob")
 let config = {
   entry: ['./src/index.jsx'],
   output: {
+    publicPath: '/',
     filename: 'bundle.[name].js',
     path: path.resolve(__dirname, './dist'),
   },

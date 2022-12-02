@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "export NODE_ENV='local' && webpack serve"
+    "start": "export NODE_ENV='local' && webpack serve",
+    "build": "export NODE_ENV='production' && webpack"
   },
   "keywords": [],
   "author": "",
