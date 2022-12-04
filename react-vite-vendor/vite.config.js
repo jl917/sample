@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 import path from 'path';
 import react from '@vitejs/plugin-react';
+import createExternal from 'vite-plugin-external';
 
 export default defineConfig(({ mode, command }) => {
   return defineConfig({
@@ -27,6 +28,13 @@ export default defineConfig(({ mode, command }) => {
 
     plugins: [
       react(),
+      // createExternal({
+      //   externals: {
+      //     react: 'vendorV1.React',
+      //     'react-dom': 'vendorV1.ReactDOM',
+      //     antd: 'vendorV1.antd'
+      //   }
+      // })
     ],
   })
 });
