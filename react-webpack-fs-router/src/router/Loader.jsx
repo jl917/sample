@@ -1,7 +1,6 @@
-import React, { Suspense } from 'react';
+import { Suspense } from 'react';
 
 const Loader = (elementPath) => {
-  console.log(elementPath);
   const Page = React.lazy(() => import(`../pages/${elementPath}`));
   return (
     <div>
