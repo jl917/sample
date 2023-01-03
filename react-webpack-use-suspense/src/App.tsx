@@ -1,39 +1,47 @@
-import { Suspense } from "react"
-import useSWR, { SWRConfig } from 'swr'
+import { Suspense } from "react";
+import Axios from 'axios';
 
-const fetchData = (data: string) => new Promise((resolve) => {
-  // return resolve({ data: 'hello suspense' });
-  setTimeout(() => {
-    return resolve({ data, key: 0 });
-  }, 2000);
-})
-
-const UserList = () => {
-  const obj: any = useSWR('hello swr', fetchData);
-  const { mutate, isLoading, data } = obj;
-  console.log(obj)
-  const onMutate = () => {
-    mutate('change value', fetchData);
-  }
-  if (isLoading) {
-    return <>swr loading...</>
-  }
-  return (
-    <>
-      <div>{data.data}</div>
-      <div>{data.key}</div>
-      <button onClick={onMutate}>fetchData</button>
-    </>
+const wrapPromise = (promise: Promise<any>) => {
+  let status = 'pending';
+  let result: any;
+  const suspender = promise.then(
+    (r) => {
+      status = "success";
+      result = r;
+    },
+    (e) => {
+      status = "error";
+      result = e;
+    },
   )
+  return () => {
+    switch (status) {
+      case 'success':
+        return result;
+      case 'error':
+        throw result;
+      default:
+        throw suspender;
+    }
+  }
+}
+
+const useSuspender = (url: string) => wrapPromise(Axios.get(url));
+const todos = useSuspender('https://httpbin.org/delay/3')
+// https://jsonplaceholder.typicode.com/users/1/todos
+// https://httpbin.org/delay/3
+
+const Child = () => {
+  const r = todos();
+  console.log(r);
+  return <div>child component</div>
 }
 
 const App = () => {
   return (
-    <SWRConfig>
-      <Suspense fallback={<div>loading</div>}>
-        <UserList />
-      </Suspense>
-    </SWRConfig>
+    <Suspense fallback={<div>loading</div>}>
+      <Child />
+    </Suspense>
   )
 }
 
