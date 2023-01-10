@@ -15,12 +15,18 @@ export default defineConfig(({ mode, command }) => {
         '@': path.resolve(__dirname, './src'),
       },
     },
+    server: {
+      port: 4000,
+    },
     plugins: [
       react(),
       AutoImport({
         include: [/\.[tj]sx?$/],
         imports: [
-          'react'
+          'react',
+          {
+            'react-dom/client': ['createRoot'],
+          }
         ],
         defaultExportByFilename: true,
         dirs: [
@@ -32,10 +38,10 @@ export default defineConfig(({ mode, command }) => {
         ],
         dts: true,
         vueTemplate: false,
-      
+
         // Custom resolvers, compatible with `unplugin-vue-components`
         // see https://github.com/antfu/unplugin-auto-import/pull/23/
-        resolvers: [],      
+        resolvers: [],
         eslintrc: {
           enabled: false, // Default `false`
           filepath: './.eslintrc-auto-import.json', // Default `./.eslintrc-auto-import.json`

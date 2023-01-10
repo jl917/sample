@@ -2,6 +2,7 @@
 export {}
 declare global {
   const createRef: typeof import('react')['createRef']
+  const createRoot: typeof import('react-dom/client')['createRoot']
   const forwardRef: typeof import('react')['forwardRef']
   const lazy: typeof import('react')['lazy']
   const memo: typeof import('react')['memo']
