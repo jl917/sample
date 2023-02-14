@@ -1,3 +1,6 @@
+import { Suspense } from "react";
+import Axios from 'axios';
+
 const wrapPromise = (promise: Promise<any>) => {
   let status = 'pending';
   let result: any;
@@ -11,34 +14,34 @@ const wrapPromise = (promise: Promise<any>) => {
       result = e;
     },
   )
-  return {
-    get: () => {
-      switch (status) {
-        case 'success':
-          return result;
-        case 'error':
-          throw result;
-        default:
-          throw suspender;
-      }
+  return () => {
+    switch (status) {
+      case 'success':
+        return result;
+      case 'error':
+        throw result;
+      default:
+        throw suspender;
     }
   }
 }
 
-const useFetch = (url: string) => {
-  const fetchData = fetch(url);
-  return {
-    todos: wrapPromise(fetchData),
-  };
+const useSuspender = (url: string) => wrapPromise(Axios.get(url));
+const todos = useSuspender('https://httpbin.org/delay/3')
+// https://jsonplaceholder.typicode.com/users/1/todos
+// https://httpbin.org/delay/3
+
+const Child = () => {
+  const r = todos();
+  console.log(r);
+  return <div>child component</div>
 }
 
-const todos = useFetch('https://jsonplaceholder.typicode.com/todos')
-
 const App = () => {
-  const r = todos.todos.get();
-  console.log(r.json());
   return (
-    <div>123</div>
+    <Suspense fallback={<div>loading</div>}>
+      <Child />
+    </Suspense>
   )
 }
 
