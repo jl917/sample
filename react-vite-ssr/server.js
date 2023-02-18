@@ -5,8 +5,6 @@ import express from 'express'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
-const isTest = process.env.VITEST
-
 process.env.MY_CUSTOM_SECRET = 'API_KEY_qwertyuiop'
 
 export async function createServer(
@@ -31,7 +29,7 @@ export async function createServer(
       await import('vite')
     ).createServer({
       root,
-      logLevel: isTest ? 'error' : 'info',
+      logLevel: 'info',
       server: {
         middlewareMode: true,
         watch: {
@@ -94,10 +92,8 @@ export async function createServer(
   return { app, vite }
 }
 
-if (!isTest) {
-  createServer().then(({ app }) =>
-    app.listen(5173, () => {
-      console.log('http://localhost:5173')
-    }),
-  )
-}
+createServer().then(({ app }) =>
+  app.listen(5173, () => {
+    console.log('http://localhost:5173')
+  }),
+)
