@@ -2,6 +2,7 @@ import { defineConfig } from 'vite';
 import path from 'path';
 import react from '@vitejs/plugin-react';
 import AutoImport from 'unplugin-auto-import/vite';
+import PresetAntd from './presets/antd';
 
 export default defineConfig(({ mode, command }) => {
   return defineConfig({
@@ -26,7 +27,8 @@ export default defineConfig(({ mode, command }) => {
           'react',
           {
             'react-dom/client': ['createRoot'],
-          }
+          },
+          PresetAntd
         ],
         defaultExportByFilename: true,
         dirs: [
