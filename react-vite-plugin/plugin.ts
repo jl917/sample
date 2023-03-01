@@ -31,7 +31,7 @@ const removeAttributes = (): Plugin => ({
   name: 'vite-plugin-remove-attributes',
   apply: 'build',
   transform: (src: string, id: string) => {
-    let result: ITransformResult = { code: '', map: '' };
+    let result: ITransformResult = { code: src };
     const isTrans = (process.env.NODE_ENV === 'production') && filterFile(id);
     if (isTrans) {
       result = transformSync(src, {
