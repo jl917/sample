@@ -2,6 +2,11 @@ import { createFilter, Plugin } from 'vite';
 import { CallExpression, parseSync, transformSync } from '@swc/core';
 import { Visitor } from '@swc/core/Visitor';
 
+interface ITransformResult {
+  code: string;
+  map?: string;
+}
+
 const include = [/\.[cm]?[tj]sx?$/];
 const exclude = ['**/node_modules/**'];
 
@@ -26,10 +31,10 @@ const removeAttributes = (): Plugin => ({
   name: 'vite-plugin-remove-attributes',
   apply: 'build',
   transform: (src: string, id: string) => {
-
+    let result: ITransformResult = { code: '', map: '' };
     const isTrans = (process.env.NODE_ENV === 'production') && filterFile(id);
     if (isTrans) {
-      const a = transformSync(src, {
+      result = transformSync(src, {
         plugin,
         sourceMaps: true,
         jsc: {
@@ -39,18 +44,8 @@ const removeAttributes = (): Plugin => ({
           }
         }
       })
-      console.log(a);
-      // console.log(a);
-      // const code = parseSync(src, {
-      //   syntax: 'ecmascript',
-      //   target: 'esnext',
-      //   jsx: true,
-      // })
-
-      // console.log(JSON.stringify(a, null, 2));
-      // console.log(src);
-      // console.log(id);
     }
+    return result;
   },
 })
 
