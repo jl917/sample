@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 import path from 'path';
 import react from '@vitejs/plugin-react';
+import vitePrerender from './src/plugins/vitePrerender';
 
 export default defineConfig(({ mode, command }) => {
   return defineConfig({
@@ -16,6 +17,7 @@ export default defineConfig(({ mode, command }) => {
     },
     plugins: [
       react(),
+      vitePrerender(),
     ],
     server: {
       port: 3001
