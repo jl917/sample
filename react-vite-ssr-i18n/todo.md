@@ -1,0 +1,1 @@
+[] build시 다국어별로 export되기
