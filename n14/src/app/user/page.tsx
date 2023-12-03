@@ -23,6 +23,7 @@ export default function User() {
   const q = useQuery({
     queryKey: ['users', page],
     queryFn: async () => getUsers(page),
+    staleTime: 1,
   });
 
   const onChangePage = (page: number) => {
@@ -35,8 +36,8 @@ export default function User() {
       <Table
         rowKey="email"
         columns={columns}
-        loading={q.isLoading}
-        dataSource={dataSource}
+        loading={q.isLoading || q.isFetching}
+        dataSource={q.isFetching ? [] : dataSource}
         pagination={{
           total: 40,
           showTotal: (total) => `Total ${total} items`,
