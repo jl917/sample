@@ -33,7 +33,7 @@ export default function User() {
   return (
     <>
       <Table
-        rowKey="login.uuid"
+        rowKey="email"
         columns={columns}
         loading={q.isLoading}
         dataSource={dataSource}
